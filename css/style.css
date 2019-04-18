@@ -565,7 +565,7 @@ input[type=submit] {
 
   .flip-card-back a {
     background-color:  #595959;
-    color: white;
+    color: #FFFFFF;
     padding: 10px 15px;
     border: none;
     border-radius: 2px;
@@ -708,7 +708,7 @@ div.text a {
 
 .flip-card-back a {
   background-color:  #595959;
-  color: white;
+  color: #FFFFFF;
   padding: 10px 15px;
   border: none;
   border-radius: 2px;
