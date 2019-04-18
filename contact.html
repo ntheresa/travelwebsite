@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href = "css/html5reset.css">
+    <link rel="stylesheet" href = "css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title> Contact </title>
+    </head>
+  <body>
+    <a href="#main" class="skip"> Skip to Content </a>
+    <header>
+      <nav>
+        <div class="navigation-menu" id="navigation">
+            <a href="index.html" >Home</a>
+            <a href="about.html">About</a>
+            <a href="destinations.html" >Destinations</a>
+            <a href="contact.html" class="active">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+      </nav>
+<h1> CONTACT FORM </h1>
+</header>
+  <main id = "main" >
+  <div class="container-form">
+      <form action="#" method="POST" onsubmit="return checkForm();">
+      <fieldset>
+
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="firstname" placeholder="Your name..">
+      <p class="errorMsg" id="nameError">Please enter your first name. </p> <br>
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+      <label for="email"> Email </label>
+      <input type="email" id="email" name="emailaddress" placeholder="Email address..">
+      <p class="errorMsg" id="addressError">Please enter your address. </p> <br>
+
+      <label for="subject">Subject</label>
+      <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+      <p class="errorMsg" id="subjectError">Message cannot be empty. </p> <br>
+
+      <input type="submit" value="Submit" onclick='checkEmail();'>
+      </fieldset>
+      </form>
+    </div>
+  <script>
+  function myFunction() {
+  var nav = document.getElementById("navigation");
+  if (nav.className === "navigation-menu") {
+  nav.className += " responsive";
+  } else {
+  nav.className = "navigation-menu";
+  }
+  }
+
+  function checkForm(){
+    var FullName = document.querySelector('#fname');
+    var AddressName = document.querySelector('#email');
+    var Subject = document.querySelector('#subject');
+    var FullNameE = document.querySelector("#nameError");
+    var AddressNameE = document.querySelector("#addressError");
+    var SubjectE = document.querySelector("#subjectError");
+    var valid = true;
+
+    if (FullName.value == '') {
+      FullNameE.style.display = "block";
+      valid = false;
+    }
+    else {
+      FullNameE.style.display = "none";
+    }
+    if (AddressName.value == '') {
+      AddressNameE.style.display = "block";
+      valid = false;
+    }
+    else {
+      AddressNameE.style.display = "none";
+    }
+    if (Subject.value == '') {
+      SubjectE.style.display = "block";
+      valid = false;
+    }
+    else {
+      SubjectE.style.display = "none";
+    }
+    return valid;
+  }
+
+  function checkEmail() {
+
+      var email = document.getElementById('email');
+      var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+      if (!filter.test(email.value)) {
+      alert('Please provide a valid email address');
+      email.focus;
+      return false;
+   }
+  }
+  </script>
+      <br>
+      <div  class='contactinfo'>
+      travellersguide@gmail.com <br>
+      (800) 123 - 4567
+      </div>
+      <br>
+
+</main>
+<footer>
+<p>  Created by Theresa Nguyen <i class="far fa-copyright"></i> </p> </footer>
+</body>
+</html>

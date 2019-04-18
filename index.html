@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href = "css/html5reset.css">
+    <link rel="stylesheet" href = "css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title> Traveller's Guide </title>
+  </head>
+  <body>
+    <a href="#main" class="skip"> Skip to Content </a>
+    <header>
+      <nav>
+        <div class="navigation-menu" id="navigation">
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
+          <a href="destinations.html">Destinations</a>
+          <a href="contact.html">Contact</a>
+          <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+              </a>
+        </div>
+      </nav>
+       <h1> WELCOME TO TRAVELLER'S GUIDE </h1>
+    </header>
+    <main id = "main">
+      <h2> Find tips, tricks, and top destinations places! </h2>
+      <br>
+      <h3> <i> Spotlight Destination </i> </h3>
+    <h3 class = "country">  ITALY </h3>
+            <div class="slideshow-container">
+              <div class="slides fade">
+                <img src="images/italy.jpg" class="slideshow-image" alt="italy slideshow image" >
+              </div>
+
+              <div class="slides fade">
+                <img src="images/italy2.jpg" class="slideshow-image"  alt="italy slideshow image 2">
+              </div>
+
+              <div class="slides fade">
+                <img src="images/italy3.jpg" class="slideshow-image"  alt="italy slideshow image 3">
+              </div>
+
+              <div class="slides fade">
+                <img src="images/italy4.jpg" class="slideshow-image"  alt="italy slideshow image 4">
+              </div>
+
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            </div>
+        <br>
+          <p class="homepage" >
+          <b> Italy is known for its vibrant art and food. With its wide array of art, food, and culture, <br> you can't go wrong with this top travel destination pick! </b>
+         </p>
+    <script >
+    var slideIndex = 0;
+    showCarousel();
+
+        function showCarousel() {
+          var x;
+          var slides = document.getElementsByClassName("slides");
+          for (x = 0; x < slides.length; x++) {
+            slides[x].style.display = "none";
+          }
+          slideIndex++;
+          if (slideIndex > slides.length) {slideIndex = 1}
+          slides[slideIndex-1].style.display = "block";
+          setTimeout(showCarousel, 3000); //
+        }
+
+        function myFunction() {
+          var nav = document.getElementById("navigation");
+          if (nav.className === "navigation-menu") {
+            nav.className += " responsive";
+          } else {
+            nav.className = "navigation-menu";
+          }
+        }
+
+    </script>
+    </main>
+    <footer>
+      <p> Created by Theresa Nguyen <i class="far fa-copyright"></i> </p>
+    </footer>
+  </body>
+</html>

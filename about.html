@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name = 'viewport' content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href = "css/html5reset.css">
+    <link rel="stylesheet" href = "css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+    <title> About </title>
+
+    </head>
+  <body>
+    <a href="#main" class="skip"> Skip to Content </a>
+    <header>
+      <nav>
+        <div class="navigation-menu" id="navigation">
+            <a href="index.html" >Home</a>
+            <a href="about.html" class="active">About</a>
+            <a href="destinations.html" >Destinations</a>
+            <a href="contact.html" >Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa fa-bars"></i>
+            </a>
+        </div>
+
+       </nav>
+       <h1> WHAT IS TRAVELLER'S GUIDE?  <i class="fas fa-map"></i> </h1>
+    </header>
+    <main id = "main">
+      <div class = "container-about">
+          <img class="worldmap" src= "images/worldmap.jpg" alt = "World Map"/> <br>
+          <div class = "about-text">
+              <i class="fas fa-star"></i>  Traveler's Guide assists people who are looking to travel with tips, tricks, and destination ideas. <br> <br>
+              <i class="fas fa-star"></i>   We want people to experience the world as much as they can with our help! <br> <br>
+              <i class="fas fa-star"></i> Our services are provided by travel professionals who have traveled since they were young and have developed a taste for culture. <br> <br>
+           <button id="modalbutton">  See what one of our travellers had to say about travelling to India! </button>
+
+          <div id="myModal" class="modal">
+          <div class="modal-content">
+           <span class="close-modal">&times;</span>
+           <p>  "I'm so grateful for Traveller's Guide for helping me seek the perfect travel destination.
+             I was able to immerse myself into India's rich culture by
+             staying at a hostel, and interacting with Indian people themselves. I saw a cooking demonstration inside a family's home and had dinner with them. This
+             one of kind experience is one that I will remember forever. "</p>
+           </div>
+          </div>
+
+          </div>
+      </div>
+
+    <script>
+        function myFunction() {
+          var nav = document.getElementById("navigation");
+          if (nav.className === "navigation-menu") {
+            nav.className += " responsive";
+          } else {
+            nav.className = "navigation-menu";
+          }
+        }
+
+        var modal = document.getElementById('myModal');
+
+
+        var btn = document.getElementById("modalbutton");
+
+
+        var span = document.getElementsByClassName("close-modal")[0];
+
+
+        btn.onclick = function() {
+          modal.style.display = "block";
+        }
+
+
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+
+
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+    </script>
+      </main>
+      <footer>
+        <p>  Created by Theresa Nguyen <i class="far fa-copyright"></i> </p> </footer>
+  </body>
+</html>
