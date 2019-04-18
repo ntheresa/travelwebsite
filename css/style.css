@@ -360,7 +360,7 @@ input[type=submit]:hover {
 
 .callout {
   position: fixed;
-  bottom: 35px;
+  top: 200px;
   right: 20px;
   margin-left: 20px;
   max-width: 250px;
@@ -564,7 +564,7 @@ input[type=submit] {
 
 
   .flip-card-back a {
-    background-color: #a9a9a9;
+    background-color:  #595959;
     color: white;
     padding: 10px 15px;
     border: none;
@@ -707,7 +707,7 @@ div.text a {
 }
 
 .flip-card-back a {
-  background-color: #a9a9a9;
+  background-color:  #595959;
   color: white;
   padding: 10px 15px;
   border: none;
